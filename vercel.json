@@ -1,0 +1,1 @@
+{\n  "routes": [\n    {\n      "src": "/api/(.*)",\n      "dest": "backend/$1"\n    }\n  ],\n  "rewrites": [\n    {\n      "source": "/(.*)",\n      "destination": "frontend/$1"\n    }\n  ],\n  "builds": [\n    {\n      "src": "frontend/package.json",\n      "use": "@vercel/react"\n    },\n    {\n      "src": "backend/package.json",\n      "use": "@vercel/node"\n    }\n  ]\n}
